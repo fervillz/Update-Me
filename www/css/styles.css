@@ -1,0 +1,275 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+/* latin */
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round Regular'), local('VarelaRound-Regular'), url('../font/VarelaRound-Regular.woff') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+.page {
+	background-color: #fff;
+	background-image: url("../img/bg-tr.jpg"), url("../img/bg-bl.jpg");
+    background-position: right top, left bottom;
+    background-repeat: no-repeat;
+    font-family: 'Varela Round';
+    text-align: center;
+}
+
+.page.signup .content-block {
+	margin-top: 135px;
+}
+
+.logo {
+	text-align: center;
+	max-width: 330px;
+    margin: auto;
+    margin-top: 155px;
+}
+
+.logo .button {
+	margin-top: 42px;
+}
+
+.logo img {
+	max-width: 200px;
+}
+
+.logo a {
+	display: block;
+	width: 100%;
+}
+
+.logo a.signup {
+	color: #063046;
+    font-size: 21px;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.button.color-primary {
+	background: #063046;
+}
+
+.button.color-yellow-orange {
+	background: #fbc450;
+	color: #063046;
+}
+
+.button.button-bigger {
+    padding: 14px 55px;
+    font-size: 28px;
+    height: auto;
+    border-radius:  15px;
+    display: inline-block;
+    width: auto;
+}
+
+.button.login {
+	width: 100%;
+}
+
+.navbar-inner {
+	background: #063046;
+	color: #fff;
+	font-family: 'Varela Round';
+}
+
+.icon-only {
+	color: #fff;
+    background: #fcc048;
+}
+
+.panel-left a {
+	color: #fff;
+}
+
+.panel {
+	font-size: 22px;
+}
+
+.friend-partner a.button.button-bigger {
+	padding: 10px 22px;
+    font-size: 22px;
+    height: auto;
+    border-radius: 15px;
+    width: auto;
+}
+
+.friend-partner a.friend {
+	float: left;
+}
+
+.friend-partner a.partner {
+	float: right;
+}
+
+.item-input input.button.button-bigger,
+.item-input textarea.button.button-bigger {
+	text-align: left;
+	padding: 14px 18px;
+	margin: 0;
+	margin-bottom: 20px;
+	width: 100%;
+	font-size: 22px;
+}
+
+.item-input input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+}
+
+.signup-friend-partner-form {
+	margin-top: 36px;	
+}
+
+.input-chkbox {
+	text-align: left;	
+	font-size: 22px;
+	color: #063046;
+	background: #fff;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 10px 0;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #063046;
+    box-sizing: border-box;
+}
+
+.input-chkbox label {
+	width: calc(100% - 44px);
+    display: inline-block;
+}
+
+input[type="checkbox"] {
+	width: auto !important;
+}
+
+.item-input.label {
+	color: #063046;
+	font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-family: 'Varela Round';
+}
+
+.search-logo {
+	max-width: 109px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.search-logo img {
+	width: 100%;
+}
+
+.search-items .item {
+	width: 30%;
+    display: inline-block;
+}
+
+.search-items .item  img {
+	width: 100%;
+}
+
+.search-buttons {
+	margin-top: 20px;
+}
+
+.button-u {
+    background: #a10f4d;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 3px #a10f4d;
+    padding: 7px 15px;
+    display: inline-block;
+    margin: 3px;
+    width: auto;
+    color: #fff;
+}
+
+.search-results {
+	max-height: 338px;
+	overflow-y: auto;
+}
+
+.search-results-title {
+	border-bottom: 3px solid #003242;
+    color: #003242;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.search-results .item {
+	border-bottom: 2px solid #7b8c96;
+	display: inline-block;
+	width: 100%;
+	background: rgba(255, 255, 255, .8);
+	padding: 10px 0;
+}
+
+.search-results .thumb {
+	float: left;
+	margin-right: 15px;
+	width: calc(40% - 15px);
+}
+
+.search-results .thumb img {
+	width: 100%;
+}
+
+.search-results .details {
+	float: right;
+	width: 60%;
+}
+.search-results .details p {
+	margin-top: 0;
+    text-align: left;
+}
+
+.search-results-more {
+	text-transform: uppercase;
+    float: right;
+    color: #063046;
+    font-weight: bold;
+}
+
+.search-map-embed img {
+	width: 100%;
+}
+
+.toolbar-inner {
+	background: #fcc048;
+}
+
+.toolbar-inner a {
+	color: #fff;
+}
